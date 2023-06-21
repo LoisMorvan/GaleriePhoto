@@ -1,0 +1,7 @@
+<h2>Galerie photo</h2>
+<ul>
+  <li *ngFor="let image of images">
+    <img [src]="image.url" alt="{{ image.titre }}">
+    <p>{{ image.titre }}</p>
+  </li>
+</ul>

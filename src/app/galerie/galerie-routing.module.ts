@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GalerieComponent } from './galerie.component';
+import { imagesResolver } from '../core/resolvers/images.resolver';
 
 const routes: Routes = [
-  { path: '', component: GalerieComponent }
+  { path: '', component: GalerieComponent, resolve: { images: imagesResolver } }
 ];
 
 @NgModule({

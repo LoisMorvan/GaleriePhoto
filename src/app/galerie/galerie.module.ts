@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { GalerieRoutingModule } from './galerie-routing.module';
 import { GalerieComponent } from './galerie.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { GalerieComponent } from './galerie.component';
   ],
   imports: [
     CommonModule,
-    GalerieRoutingModule
+    GalerieRoutingModule,
+    HttpClientModule,
   ]
 })
 export class GalerieModule { }

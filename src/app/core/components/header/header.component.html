@@ -1,11 +1,11 @@
 <nav class="navbar sticky-top bg-primary">
   <div class="container-fluid">
     <span class="navbar-brand mb-0 h1">GALERIE PHOTOS</span>
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-light btn-sm">
-        <i class="bi bi-plus-circle"></i> Créer une image
+    <div class="btn-group" role="group" aria-label="Basic example" *ngIf="isUserConnected$ | async">
+      <button type="button" class="btn btn-light btn-sm" *ngIf="isManagerConnected$ | async" (click)="onCreateButtonClick()">
+        <i class="bi bi-plus-circle"></i> Ajouter une image
       </button>
-      <button type="button" class="btn btn-danger btn-sm">
+      <button type="button" class="btn btn-danger btn-sm" (click)="onDisconnectButtonClick()">
         <i class="bi bi-box-arrow-in-right"></i> Déconnexion
       </button>
     </div>

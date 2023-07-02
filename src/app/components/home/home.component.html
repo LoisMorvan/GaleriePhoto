@@ -1,7 +1,7 @@
 <div class="row p-2">
   <div class="col-sm p-2">
-    <div class="card">
-      <img src="https://us.123rf.com/450wm/bitontawan02/bitontawan021502/bitontawan02150200038/36125987-aucune-photo-signe-de-la-cam%C3%A9ra-et-le-symbole.jpg?ver=6"
+    <div class="card" (click)="onChoose('CLIENT')">
+      <img src="assets/site/picture.png"
         class="card-img-top" alt="...">
       <div class="card-body text-center">
         <h5 class="card-title">Galerie</h5>
@@ -10,12 +10,12 @@
     </div>
   </div>
   <div class="col-sm p-2">
-    <div class="card">
-      <img src="https://us.123rf.com/450wm/bitontawan02/bitontawan021502/bitontawan02150200038/36125987-aucune-photo-signe-de-la-cam%C3%A9ra-et-le-symbole.jpg?ver=6"
+    <div class="card" (click)="onChoose('OWNER')">
+      <img src="assets/site/gerer.png"
         class="card-img-top" alt="...">
       <div class="card-body text-center">
         <h5 class="card-title">Gérer</h5>
-        <p class="card-text">Ajouter, supprimer et modifier des images</p>
+        <p class="card-text">Ajouter et supprimer des images</p>
       </div>
     </div>
   </div>

@@ -1,1 +1,12 @@
-<p>manager works!</p>
+<h2 class="titre">Gérer photo</h2>
+<div class="grid">
+  <div *ngFor="let image of images$ | async" class="rounded hovereffect">
+    <a [href]="image.url" class="fancylight popup-btn" data-fancybox-group="light">
+      <img class="img-fluid rounded image-item" [src]="image.url"
+        alt="{{ image.name }}">
+      <div class="overlay">
+        <h2 class="info">{{ image.name }}</h2>
+      </div>
+    </a>
+  </div>
+</div>

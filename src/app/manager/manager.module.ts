@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ManagerRoutingModule } from './manager-routing.module';
 import { ManagerComponent } from './manager.component';
 import { AddImageComponent } from './components/add-image/add-image.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { AddImageComponent } from './components/add-image/add-image.component';
   ],
   imports: [
     CommonModule,
-    ManagerRoutingModule
+    ManagerRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ManagerModule { }

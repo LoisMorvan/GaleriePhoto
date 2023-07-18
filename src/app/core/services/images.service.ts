@@ -11,4 +11,9 @@ export class ImagesService {
   public getImages(): Observable<Images[]> {
     return this.http.get<Images[]>('http://localhost:3000/images');
   }
+
+  public createImage(formData: FormData): Observable<any> {
+    return this.http.post('http://localhost:3000/images', formData);
+  }
+
 }

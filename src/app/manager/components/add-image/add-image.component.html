@@ -1,1 +1,15 @@
-<p>add-image works!</p>
+<h2>Ajouter une image</h2>
+
+<form [formGroup]="createImageForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="titre" class="form-label">Titre</label>
+    <input type="text" id="titre" formControlName="name" class="form-control" />
+  </div>
+
+  <div class="mb-3">
+    <label for="upload" class="form-label">Télécharger une image</label>
+    <input type="file" id="upload" formControlName="image" class="form-control-file" name="image"  (change)="onFileSelected($event)" />
+  </div>
+
+  <button type="submit" [disabled]="createImageForm.invalid" class="btn btn-primary">Ajouter</button>
+</form>
